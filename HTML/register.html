@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    
+    <div class="container">
+        <div class="login-card register-card">
+            <div class="logo">
+                <img src="/website/images/logo.svg" alt="Your logo">
+            </div>
+            
+            <h2>Create Account</h2>
+            
+            <form>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="John" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="username@gmail.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+91 9876543210" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Create Password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+
+                <div class="form-group terms">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the Terms of Service and Privacy Policy</label>
+                </div>
+                
+                <button type="submit" class="sign-in">Create Account</button>
+                
+                <div class="social-login">
+                    <p>or register with</p>
+                    <div class="social-buttons">
+                        <a href="https://accounts.google.com/signin" target="_blank" rel="noopener noreferrer">
+                            <button type="button" class="social-btn google" aria-label="Sign in with Google">
+                                <i class="fab fa-google"></i>
+                            </button>
+                        </a>
+                        <a href="https://github.com/login" target="_blank" rel="noopener noreferrer">
+                            <button type="button" class="social-btn github" aria-label="Sign in with GitHub">
+                                <i class="fab fa-github"></i>
+                            </button>
+                        </a>
+                        <a href="https://facebook.com/login" target="_blank" rel="noopener noreferrer">
+                            <button type="button" class="social-btn facebook" aria-label="Sign in with Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="register">
+                    <p>Already have an account? <a href="index.html">Sign in</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

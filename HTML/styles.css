@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #4361ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    filter: blur(60px);
+}
+
+.shape:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    right: -100px;
+}
+
+.shape:nth-child(2) {
+    width: 250px;
+    height: 250px;
+    bottom: -100px;
+    left: -100px;
+}
+
+.shape:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    bottom: 50%;
+    right: 20%;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    margin: 40px auto;
+    min-height: min-content;
+}
+
+.login-card, .register-card {
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+    .login-card, .register-card {
+        background: rgba(67, 97, 238, 0.9);
+    }
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    background: white;
+    border: none;
+    border-radius: 12px;
+    color: #333;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: #999;
+}
+
+.form-group input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.2);
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.forgot-password a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.terms {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 20px 0;
+    padding: 0 5px;
+}
+
+.terms input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    cursor: pointer;
+    accent-color: #1a237e;
+    flex-shrink: 0;
+    background: white;
+}
+
+.terms label {
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    cursor: pointer;
+    flex: 1;
+}
+
+.sign-in {
+    width: 100%;
+    padding: 15px;
+    background: #1a237e;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.sign-in:hover {
+    background: #283593;
+}
+
+.social-login {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-login p {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.register {
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+}
+
+.register a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        margin: 10px auto;
+    }
+
+    .login-card, .register-card {
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .social-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .terms {
+        gap: 10px;
+    }
+
+    .terms input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+    }
+
+    .terms label {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+/* Additional styles for larger screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 500px;
+    }
+
+    .login-card, .register-card {
+        padding: 50px;
+    }
+}
+
+/* For smaller screens */
+@media (max-height: 800px) {
+    body {
+        align-items: flex-start;
+        padding: 20px 20px 40px 20px;
+    }
+
+    .container {
+        margin: 0 auto;
+    }
+
+    .login-card, .register-card {
+        max-height: calc(100vh - 40px);
+        overflow-y: auto;
+    }
+}
+
+/* Custom scrollbar styling */
+.login-card::-webkit-scrollbar,
+.register-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+.login-card::-webkit-scrollbar-track,
+.register-card::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.login-card::-webkit-scrollbar-thumb,
+.register-card::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
