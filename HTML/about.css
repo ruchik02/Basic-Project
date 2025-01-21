@@ -1,0 +1,174 @@
+/* Additional styles specific to about page */
+.about-container {
+    padding: 40px 5%;
+    min-height: calc(100vh - 200px);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.resume-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #ffd54f;
+    color: #333;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 400px;  /* Fixed width */
+    height: 400px; /* Same as width to maintain circle */
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    background: #ffd54f;
+    filter: grayscale(100%); /* Makes image black and white */
+}
+
+/* Active nav link state */
+.nav-links a.active {
+    color: #ffd54f;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .about-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .about-text h1 {
+        font-size: 36px;
+    }
+
+    .resume-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-container {
+        padding: 40px 20px;
+    }
+
+    .about-text h1 {
+        font-size: 32px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .about-image img {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+/* Updated footer styles */
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.copyright {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.copyright p {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px 0;
+    }
+    
+    .social-links {
+        gap: 12px;
+    }
+    
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .social-icon i {
+        font-size: 14px;
+    }
+} 
