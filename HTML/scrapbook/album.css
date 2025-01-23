@@ -18,14 +18,14 @@ body {
     width: 90%;
     max-width: 1000px;
     height: 80vh;
-    perspective: 2000px;
+    /* perspective: 2000px; */
 }
 
 .book {
     width: 100%;
     height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
+    /* position: relative;
+    transform-style: preserve-3d; */
 }
 
 /* Cover Design */
@@ -35,7 +35,6 @@ body {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -212,8 +211,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 .photo-heart {
@@ -482,14 +480,15 @@ body {
 /* Memories Section */
 .memories-section {
     padding: 60px 20px;
-    background: #f9f3ee;
+    background: transparent !important;
     margin-top: 40px;
 }
 
 .memories-container {
-    margin-top: 100px;
+    /* margin-top: 100px; */
     max-width: 1200px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    background: transparent !important;
 }
 
 .memories-title {
@@ -518,6 +517,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 20px;
+    background: transparent !important;
 }
 
 /* Memory Items */
@@ -529,6 +529,7 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     transform: rotate(-3deg);
     transition: all 0.3s ease;
+    background: transparent !important;
 }
 
 .memory-item:nth-child(even) {
@@ -554,6 +555,7 @@ body {
     padding: 20px;
     text-shadow: 2px 2px 4px rgba(255,105,180,0.3);
     animation: float 3s infinite ease-in-out;
+    background: transparent !important;
 }
 
 /* Overlay Effects */
@@ -642,4 +644,46 @@ body {
     .memories-title {
         font-size: 2.5em;
     }
+}
+
+/* Add this new style for the transparent wrapper */
+.transparent-wrapper {
+    background: #fff5eb !important; /* Light cream background */
+    position: relative;
+    z-index: 1; /* Ensure it's above the body background */
+    border-radius: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    
+}
+
+/* Update the memories section styles */
+.memories-section {
+    position: relative;
+    z-index: 2;
+    background: #fff5eb !important;
+}
+
+.memories-container {
+    background: #fff5eb !important;
+}
+
+.memories-grid {
+    background: #fff5eb !important;
+}
+
+/* Memory items should be transparent to show their images */
+.memory-item {
+    background: transparent;
+}
+
+/* Keep the overlay styles */
+.memory-overlay {
+    background: rgba(139, 69, 19, 0.8);
+}
+
+/* Style the love text */
+.love-text {
+    background: transparent;
+    color: #ff69b4;
 } 
